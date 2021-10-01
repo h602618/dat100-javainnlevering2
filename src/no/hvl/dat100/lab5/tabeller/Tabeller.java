@@ -15,8 +15,9 @@ public class Tabeller {
 
 		resultat += "[";
 		for (int i = 0; i < tabell.length; i++) {
-			if (i > 0)
+			if (i > 0) {
 				resultat += ",";
+			}
 
 			resultat += tabell[i];
 		}
@@ -72,6 +73,7 @@ public class Tabeller {
 	}
 
 	// f)
+
 	public static int[] reverser(int[] tabell) {
 		int[] arr = new int[tabell.length];
 		for (int i = 0; i < tabell.length; i++) {

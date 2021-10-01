@@ -1,3 +1,7 @@
+# VIKTIG
+
+`testSpeile` gir _false_ dersom alle testene kjøres sammen, men gir _true_ dersom testen kjøres individuelt.
+
 # DAT100 - Obligatoriske Innlevering 2
 
 Denne oppbevaringsplasssen inneholder startkode og enhetstester for den obligatoriske innlevering av de to oppgave fra Java programmeringslab 5 og 6:
@@ -21,4 +25,4 @@ Den ferdige Java-koden må legges opp på github og en URL til oppbevaringsplass
 
 ### Tilgang til koden for andre i gruppen
 
-Det er tilstrekkelig at en person i gruppen utfører en fork på startkoden. Den som har utført kan gi tilgang til oppbevaringsplassen ved å bruke *Settings* og *Manage Access* på github.
+Det er tilstrekkelig at en person i gruppen utfører en fork på startkoden. Den som har utført kan gi tilgang til oppbevaringsplassen ved å bruke _Settings_ og _Manage Access_ på github.

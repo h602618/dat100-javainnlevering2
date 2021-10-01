@@ -33,15 +33,13 @@ public class Matriser {
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
-		int[][] minMatrise = new int[matrise.length][matrise[0].length];
 		for (int i = 0; i < matrise.length; i++) {
 			for (int j = 0; j < matrise[i].length; j++) {
-				System.out.println(matrise[i][j]);
-				minMatrise[i][j] = matrise[i][j] * tall;
+				matrise[i][j] = matrise[i][j] * tall;
 			}
 		}
 
-		return minMatrise;
+		return matrise;
 	}
 
 	// d)
@@ -59,14 +57,34 @@ public class Matriser {
 
 	// e)
 	public static int[][] speile(int[][] matrise) {
-		// TODO
-		throw new UnsupportedOperationException("speile ikke implementert");
+		int[][] speiletMatrise = new int[matrise.length][matrise[0].length];
+		for (int i = 0; i < matrise.length; i++) {
+			for (int j = 0; j < matrise[i].length; j++) {
+				speiletMatrise[i][j] = matrise[j][i];
+			}
+		}
 
+		return speiletMatrise;
 	}
 
 	// f)
 	public static int[][] multipliser(int[][] a, int[][] b) {
-		// TODO
-		throw new UnsupportedOperationException("multipliser ikke implementert");
+		// b skal flippes
+		int[][] speiletB = speile(b);
+
+		int[][] resultat = new int[a.length][b.length];
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < b.length; j++) {
+				int sum = 0;
+				for (int k = 0; k < a[i].length; k++) {
+					sum += a[i][k] * speiletB[j][k];
+				}
+
+				resultat[i][j] = sum;
+			}
+
+		}
+
+		return resultat;
 	}
 }
